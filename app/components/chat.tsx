@@ -1424,8 +1424,8 @@ function _Chat() {
   };
 
   function scrollToBottom() {
-    setMsgRenderIndex(renderMessages.length - CHAT_PAGE_SIZE);
-    scrollDomToBottom();
+    // setMsgRenderIndex(renderMessages.length - CHAT_PAGE_SIZE);
+    // scrollDomToBottom();
   }
 
   // clear context index = context length + index in messages
@@ -1438,8 +1438,7 @@ function _Chat() {
 
   const clientConfig = useMemo(() => getClientConfig(), []);
 
-  // const autoFocus = !isMobileScreen; // wont auto focus on mobile screen
-  const autoFoucs = false;
+  const autoFocus = !isMobileScreen; // wont auto focus on mobile screen
   const showMaxIcon = !isMobileScreen && !clientConfig?.isApp;
 
   useCommand({
