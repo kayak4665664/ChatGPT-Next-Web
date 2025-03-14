@@ -1438,7 +1438,8 @@ function _Chat() {
 
   const clientConfig = useMemo(() => getClientConfig(), []);
 
-  const autoFocus = !isMobileScreen; // wont auto focus on mobile screen
+  // const autoFocus = !isMobileScreen; // wont auto focus on mobile screen
+  const autoFoucs = false;
   const showMaxIcon = !isMobileScreen && !clientConfig?.isApp;
 
   useCommand({
