@@ -1424,8 +1424,8 @@ function _Chat() {
   };
 
   function scrollToBottom() {
-    // setMsgRenderIndex(renderMessages.length - CHAT_PAGE_SIZE);
-    // scrollDomToBottom();
+    setMsgRenderIndex(renderMessages.length - CHAT_PAGE_SIZE);
+    scrollDomToBottom();
   }
 
   // clear context index = context length + index in messages
@@ -2083,8 +2083,10 @@ function _Chat() {
                   onInput={(e) => onInput(e.currentTarget.value)}
                   value={userInput}
                   onKeyDown={onInputKeyDown}
-                  onFocus={scrollToBottom}
-                  onClick={scrollToBottom}
+{/*                   onFocus={scrollToBottom} */}
+{/*                   onClick={scrollToBottom} */}
+                  onFocus={()=>{}}
+                  onClick={()=>{}}
                   onPaste={handlePaste}
                   rows={inputRows}
                   autoFocus={autoFocus}
